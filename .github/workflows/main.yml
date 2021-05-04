@@ -31,14 +31,14 @@ jobs:
           version: 12
         
       - name: Installing NPM
-      - run: npm install
+        run: npm install
       
       - name: Building Package for Surge
-      - run: npm run build
+        run: npm run build
       
       - name: Installing Surge
-      - run: npm install -g surge
+        run: npm install -g surge
       
       - name: Deploying to Surge
-      - run: surge ./build http://class8-bootcamp2020.surge.sh/ --token {{secrets.SURGE_TOKEN}}
+        run: surge ./build http://class8-bootcamp2020.surge.sh/ --token {{secrets.SURGE_TOKEN}}
       
